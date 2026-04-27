@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* Leaflet */
+.leaflet-container {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #C9922A; border-radius: 3px; }
+
+/* Property card hover */
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(201, 146, 42, 0.2);
+}
+
+/* Status badges */
+.badge-disponible { background: #16a34a; color: white; }
+.badge-reservado  { background: #d97706; color: white; }
+.badge-vendido    { background: #dc2626; color: white; }
+
+/* ── Rich Text Editor (TipTap) ── */
+.rte-wrapper {
+  min-height: 160px;
+  max-height: 480px;
+  overflow-y: auto;
+  padding: 12px 16px;
+  background: #fff;
+}
+
+.rte-content {
+  outline: none;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #111111;
+}
+
+/* Placeholder */
+.rte-content:empty::before {
+  content: attr(data-placeholder);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+/* Tipografía dentro del editor */
+.rte-content h2 { font-size: 1.25rem; font-weight: 700; margin: 0.75em 0 0.25em; color: #111111; }
+.rte-content h3 { font-size: 1.1rem;  font-weight: 700; margin: 0.6em 0 0.2em;  color: #111111; }
+.rte-content h4 { font-size: 1rem;    font-weight: 600; margin: 0.5em 0 0.15em; color: #111111; }
+.rte-content p  { margin: 0.4em 0; }
+.rte-content strong { font-weight: 700; }
+.rte-content em     { font-style: italic; }
+.rte-content u      { text-decoration: underline; }
+.rte-content s      { text-decoration: line-through; }
+
+.rte-content ul, .rte-ul { list-style: disc;    padding-left: 1.4em; margin: 0.4em 0; }
+.rte-content ol, .rte-ol { list-style: decimal; padding-left: 1.4em; margin: 0.4em 0; }
+.rte-content li { margin: 0.15em 0; }
+
+.rte-content blockquote, .rte-blockquote {
+  border-left: 3px solid #C9922A;
+  padding-left: 1em;
+  margin: 0.6em 0;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Alineaciones */
+.rte-content [style*="text-align: center"] { text-align: center; }
+.rte-content [style*="text-align: right"]  { text-align: right; }
+.rte-content [style*="text-align: left"]   { text-align: left; }
+
+/* ── Renderizado de HTML guardado (PropertyDetail) ── */
+.prose-castelo { font-size: 0.9375rem; line-height: 1.7; color: #374151; }
+.prose-castelo h2 { font-size: 1.2rem; font-weight: 700; margin: 1em 0 0.4em; color: #111111; }
+.prose-castelo h3 { font-size: 1.05rem; font-weight: 700; margin: 0.8em 0 0.3em; color: #111111; }
+.prose-castelo h4 { font-size: 0.95rem; font-weight: 600; margin: 0.7em 0 0.25em; color: #111111; }
+.prose-castelo p  { margin: 0.5em 0; }
+.prose-castelo strong { font-weight: 700; }
+.prose-castelo em     { font-style: italic; }
+.prose-castelo ul { list-style: disc;    padding-left: 1.5em; margin: 0.5em 0; }
+.prose-castelo ol { list-style: decimal; padding-left: 1.5em; margin: 0.5em 0; }
+.prose-castelo li { margin: 0.2em 0; }
+.prose-castelo blockquote {
+  border-left: 3px solid #C9922A;
+  padding-left: 1em;
+  margin: 0.75em 0;
+  color: #6b7280;
+  font-style: italic;
+}
+.prose-castelo [style*="text-align: center"] { text-align: center; }
+.prose-castelo [style*="text-align: right"]  { text-align: right; }
