@@ -13,7 +13,7 @@ npm run build
 ## Variables de entorno (.env)
 ```
 REACT_APP_API_URL=http://castelo-group-back.test/api
-REACT_APP_WHATSAPP=593990000000
+REACT_APP_WHATSAPP=593982617985
 ```
 
 ## Páginas implementadas

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://castelo-group-back.test/api',
+  baseURL: process.env.REACT_APP_API_URL,
   headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
 });
 
@@ -30,7 +30,7 @@ api.interceptors.response.use(
 
 export default api;
 
-const BACKEND = (process.env.REACT_APP_API_URL || 'http://castelo-group-back.test/api').replace('/api', '');
+const BACKEND = (process.env.REACT_APP_API_URL || '').replace('/api', '');
 
 /** Convierte URLs relativas de storage (/storage/...) a absolutas del backend */
 export function storageUrl(url) {
